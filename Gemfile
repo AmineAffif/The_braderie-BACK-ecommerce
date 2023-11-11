@@ -33,6 +33,7 @@ gem "bootsnap", require: false
 gem 'faker'
 gem 'rack-cors', require: 'rack/cors'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'kaminari'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
