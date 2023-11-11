@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  get 'orders/create'
+  get 'products/index'
+  get 'products/show'
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # Routes pour les produits
+  resources :products, only: [:index, :show]
+
+  # Route pour créer une commande
+  post '/orders', to: 'orders#create'
+  
 end
