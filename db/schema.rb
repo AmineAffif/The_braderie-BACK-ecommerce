@@ -27,7 +27,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_11_122739) do
     t.integer "order_id", null: false
     t.integer "product_id", null: false
     t.integer "quantity"
-    t.decimal "price", precision: 10, scale: 2
+    t.decimal "price", precision: 2, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_order_items_on_order_id"
@@ -35,7 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_11_122739) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.decimal "total_price", precision: 10, scale: 2
+    t.decimal "total_price", precision: 2, scale: 2
     t.string "status"
     t.datetime "order_date"
     t.datetime "created_at", null: false
@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_11_122739) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.decimal "price", precision: 10, scale: 2
+    t.decimal "price", precision: 2, scale: 2
     t.integer "inventory"
     t.integer "category_id", null: false
     t.integer "brand_id", null: false

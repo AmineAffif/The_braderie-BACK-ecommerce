@@ -1,7 +1,7 @@
 class CreateOrders < ActiveRecord::Migration[7.0]
   def change
     create_table :orders do |t|
-      t.decimal :total_price, precision: 10, scale: 2
+      t.decimal :total_price, precision: 2, scale: 2
       t.string :status
       t.datetime :order_date
 
