@@ -1,0 +1,20 @@
+#Ignore the logs directory
+log/
+
+public/assets/
+public/packs/
+public/packs-test/
+.DS_Store
+node_modules/
+latest.dump
+*swp
+
+#Ignoring git folders
+.git
+.github
+
+#Ignoring all the markdown
+*.md
+package-lock.json
+
+doc/
