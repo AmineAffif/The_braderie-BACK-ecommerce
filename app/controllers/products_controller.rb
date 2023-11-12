@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   def index
     per_page = 21
     page = params[:page].present? ? params[:page].to_i : 1
-    products = Product.page(page).per(per_page)
+    products = Product.includes(:brand, :category).page(page).per(per_page)
     total_pages = (Product.count.to_f / per_page).ceil
 
     # Sérialisation avec ProductSerializer
