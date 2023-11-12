@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     total_pages = (Product.count.to_f / per_page).ceil
 
     # Sérialisation avec ProductSerializer
-    serialized_products = ActiveModel::SerializableResource.new(products, each_serializer: ProductSerializer)
+    serialized_products = ActiveModelSerializers::SerializableResource.new(products, each_serializer: ProductSerializer)
 
     render json: { products: serialized_products, total_pages: total_pages }
   end
