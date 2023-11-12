@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
   def create
     order = Order.new(order_params)
     if order.save
-      # Logique pour ajouter des produits à la commande...
       render json: order, status: :created
     else
       render json: order.errors, status: :unprocessable_entity
