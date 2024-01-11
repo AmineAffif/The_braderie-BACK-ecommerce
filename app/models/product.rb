@@ -2,6 +2,7 @@ class Product < ApplicationRecord
   belongs_to :brand
   belongs_to :category
   has_many :order_items
+  has_many :reviews
 
   validates :name, :price, presence: true
   validates :price, numericality: { greater_than: 0 }
